@@ -82,3 +82,4 @@ allowed-tools:
 ## 완료 기준
 **출시 전 게이트**: 큰 산출물은 `persona-validate`(SimonKCore)로 디자인 전문가(아트디렉터·UX·접근성)+대상 사용자 패널 검증 → 치명 빈틈 반영. (Core 미설치 시 인라인 self-check — AI-slop 3원칙+접근성 체크+전문가 렌즈 1개로 대체, degrade 일관.)
 산출물이 의도에 부합하고 사용자가 "이대로 좋다"라고 확인했을 때 완료. 미진하면 3번 루프로 되돌아간다.
+**완료 후**: `completion-report`(Core)로 HTML 보고서 생성 — 사용자 언어 + 현지시간 로케일 형식(KR: `[YYYY-MM-DD / HH:MM:SS KST]`) + 표·차트·이미지(디자인 산출물 미리보기 임베드).
