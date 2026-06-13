@@ -1,0 +1,29 @@
+{
+  "name": "simonk-design",
+  "version": "0.1.0",
+  "description": "예술·디자인 작업 오케스트레이션 플러그인",
+  "author": { "name": "Simon Kim", "url": "https://github.com/Simon-YHKim" },
+  "repository": "https://github.com/Simon-YHKim/SimonKDesign",
+  "license": "MIT",
+  "keywords": ["claude-code", "plugin", "orchestration", "simonk", "design"],
+  "skills": [
+    "./skills/building-native-ui/",
+    "./skills/coloring-art/",
+    "./skills/consistency-guard/",
+    "./skills/design-consultation/",
+    "./skills/design-html/",
+    "./skills/design-review/",
+    "./skills/design-shotgun/",
+    "./skills/design-system-keeper/",
+    "./skills/design-system-page/",
+    "./skills/office-docs/",
+    "./skills/plan-design-review/",
+    "./skills/remotion-best-practices/",
+    "./skills/scientific-paper/",
+    "./skills/simon-design-first/",
+    "./skills/skdesign/",
+    "./skills/slides/",
+    "./skills/social-graphic/",
+    "./skills/stitch-design-flow/"
+  ]
+}
