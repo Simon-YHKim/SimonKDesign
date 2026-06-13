@@ -51,6 +51,8 @@ allowed-tools:
 | 네이티브 UI | `building-native-ui` → `design-review` |
 | 발표자료 | `slides` (브랜드 토큰 있으면 주입) |
 | 인쇄물·산문 PDF | `office-docs`(Core) — 안내문·소책자·회고록·큰글씨 문서 |
+| 로고·브랜드 마크 | `logo-generator`(Gemini 이미지: 마크/워드마크/심볼 + SVG export) |
+| 사진첩·포토북 | `photo-album`(사용자 사진 배치·레이아웃 → 인쇄는 office-docs) |
 | 모션·영상 | `remotion-best-practices` |
 | 논문·문서 비주얼 | `scientific-paper` |
 | SNS 그래픽·포스터·카드뉴스 | `social-graphic`(Gemini 이미지: 1:1·4:5·9:16·카드뉴스 시리즈, 브랜드 토큰 주입) |
