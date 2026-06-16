@@ -1,8 +1,9 @@
 ---
 name: coloring-art
 description: >
-  유아·아동·교육용 색칠공부/라인아트 생성 스킬. 트리거 "색칠 그림", "공룡 색칠", "컬러링 페이지",
-  "라인아트", "색칠공부 만들어줘", coloring page, line art, 또는 /coloring-art. 굵은 검은 윤곽선·흰
+  Use when the user wants kids/educational coloring pages or line art — 유아·아동·교육용
+  색칠공부/라인아트 생성 스킬. 트리거 "색칠 그림", "공룡 색칠", "컬러링 페이지", "라인아트",
+  "색칠공부 만들어줘", coloring page, line art, 또는 /coloring-art. Produces 굵은 검은 윤곽선·흰
   배경·면이 단순화된 색칠 페이지나 단순 라인 일러스트를 Gemini 이미지 생성으로 만든다. 대상 연령·소재·난이도를
   먼저 확인하고(심플 모드: 보호자·아동 친화 질문), 안전·연령 적합 프롬프트로 생성한 뒤 인쇄용 PDF 묶기는
   office-docs(Core)로 핸드오프한다. skdesign 의 "그림·래스터·색칠" 경로 전용 생성 스킬.
@@ -100,3 +101,10 @@ office-docs 미설치면: "PDF 묶기는 `/plugin install simonk-core@simonk-cor
 - 폭력·공포·성인 소재 생성
 - 이 스킬에서 직접 PDF 제본 시도 (→ office-docs 위임)
 - 텍스트·워터마크가 박힌 페이지 전달
+
+## 완료 보고 (HTML) — 표준
+작업을 끝내면 **HTML 완료 보고서**를 생성한다 (SimonKCore `completion-report` 표준).
+- 첫 화면은 **심플 요약**(한눈 카드 한 줄) + 직관 그래픽/차트(인라인 SVG)·이미지.
+- 각 항목 옆 **[자세히] 버튼**(`<details>`)을 펼치면 상세 — 처음부터 쏟지 않는다(progressive disclosure).
+- 자체완결 1파일(인라인 CSS/SVG, 무JS) · 사용자 언어 · 현지시간 스탬프.
+- Core 있으면 `completion-report` 호출, 없으면 동일 형식으로 인라인 생성.

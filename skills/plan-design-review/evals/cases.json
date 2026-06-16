@@ -1,0 +1,44 @@
+{
+  "skill": "plan-design-review",
+  "version": "2.0.0",
+  "cases": [
+    {
+      "id": "en-review-design-plan",
+      "prompt": "Review the design plan before we implement it",
+      "assertions": [
+        {
+          "id": "rates-each-dimension",
+          "text": "Rates each design dimension 0-10 and explains what would make it a 10."
+        },
+        {
+          "id": "fixes-the-plan",
+          "text": "Interactively fixes the plan to raise the ratings, working in plan mode."
+        }
+      ]
+    },
+    {
+      "id": "ko-design-critique",
+      "prompt": "구현 전에 이 plan의 UI/UX를 디자인 관점에서 비평해줘",
+      "assertions": [
+        {
+          "id": "designers-eye-plan-review",
+          "text": "Performs an interactive designer's-eye plan review (like CEO/Eng review) rather than auditing a live site."
+        },
+        {
+          "id": "scored-dimensions",
+          "text": "Scores design dimensions and proposes concrete improvements to the plan."
+        }
+      ]
+    },
+    {
+      "id": "neg-vs-live-audit",
+      "prompt": "이미 배포된 사이트 시각적으로 감사하고 고쳐줘",
+      "assertions": [
+        {
+          "id": "redirects-to-design-review",
+          "text": "Recognizes live-site visual audits belong to /design-review, not plan-mode review."
+        }
+      ]
+    }
+  ]
+}

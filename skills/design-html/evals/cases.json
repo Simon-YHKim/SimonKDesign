@@ -1,0 +1,48 @@
+{
+  "skill": "design-html",
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "en-turn-into-html",
+      "prompt": "Turn this approved design into HTML and build me the page",
+      "assertions": [
+        {
+          "id": "pretext-native-html",
+          "text": "Generates production-quality Pretext-native HTML/CSS where text reflows and heights are computed."
+        },
+        {
+          "id": "smart-api-routing",
+          "text": "Uses smart API routing to pick the right Pretext patterns for the design type."
+        },
+        {
+          "id": "zero-deps-overhead",
+          "text": "Produces dynamic layouts with low (~30KB) overhead and zero dependencies."
+        }
+      ]
+    },
+    {
+      "id": "ko-implement-mockup",
+      "prompt": "이 목업 디자인 실제 페이지로 구현해줘",
+      "assertions": [
+        {
+          "id": "consumes-approved-mockup",
+          "text": "Works from an approved mockup (e.g. from /design-shotgun or a plan) to finalize the design."
+        },
+        {
+          "id": "real-html-output",
+          "text": "Produces real, dynamic HTML/CSS rather than static placeholder markup."
+        }
+      ]
+    },
+    {
+      "id": "neg-needs-direction-first",
+      "prompt": "디자인 방향도 안 정했는데 그냥 바로 코드부터 찍어줘",
+      "assertions": [
+        {
+          "id": "expects-approved-design",
+          "text": "Recognizes this skill is for finalizing an approved design/plan and that direction should be set first (e.g. via simon-design-first), rather than jumping to code blindly."
+        }
+      ]
+    }
+  ]
+}

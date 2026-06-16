@@ -1,10 +1,13 @@
 ---
 name: skdesign
+version: 0.1.0
 description: >
-  SimonKDesign 오케스트레이터 — 예술·디자인 작업의 단일 진입점. 트리거 "디자인 해줘", "UI 만들어줘",
-  "로고/브랜드", "발표자료", "디자인 시스템", "skdesign", 또는 /skdesign. 사용자 의도를 러프하게 진단한 뒤
-  적절한 하위 디자인 스킬로 라우팅하고, 산출물마다 사용자와 상호작용하며 반복 디벨롭한다. 바로 코드/픽셀을
-  찍어내지 않고 진단 → 레퍼런스 → 방향 확정 → 산출 → 리뷰 순서를 지킨다.
+  Use when the user wants a single entry point for any art/design task and needs intent
+  diagnosis and routing — SimonKDesign 오케스트레이터, 예술·디자인 작업의 단일 진입점. 트리거
+  "디자인 해줘", "UI 만들어줘", "로고/브랜드", "발표자료", "디자인 시스템", "skdesign", 또는 /skdesign.
+  Produces a rough intent diagnosis, routes to the right sub-design skill, and iteratively
+  develops each output with the user — 바로 코드/픽셀을 찍어내지 않고 진단 → 레퍼런스 → 방향 확정
+  → 산출 → 리뷰 순서를 지킨다.
 allowed-tools:
   - Read
   - Write
@@ -83,3 +86,10 @@ allowed-tools:
 **출시 전 게이트**: 큰 산출물은 `persona-validate`(SimonKCore)로 디자인 전문가(아트디렉터·UX·접근성)+대상 사용자 패널 검증 → 치명 빈틈 반영. (Core 미설치 시 인라인 self-check — AI-slop 3원칙+접근성 체크+전문가 렌즈 1개로 대체, degrade 일관.)
 산출물이 의도에 부합하고 사용자가 "이대로 좋다"라고 확인했을 때 완료. 미진하면 3번 루프로 되돌아간다.
 **완료 후**: `completion-report`(Core)로 HTML 보고서 생성 — 사용자 언어 + 현지시간 로케일 형식(KR: `[YYYY-MM-DD / HH:MM:SS KST]`) + 표·차트·이미지(디자인 산출물 미리보기 임베드).
+
+## 완료 보고 (HTML) — 표준
+작업을 끝내면 **HTML 완료 보고서**를 생성한다 (SimonKCore `completion-report` 표준).
+- 첫 화면은 **심플 요약**(한눈 카드 한 줄) + 직관 그래픽/차트(인라인 SVG)·이미지.
+- 각 항목 옆 **[자세히] 버튼**(`<details>`)을 펼치면 상세 — 처음부터 쏟지 않는다(progressive disclosure).
+- 자체완결 1파일(인라인 CSS/SVG, 무JS) · 사용자 언어 · 현지시간 스탬프.
+- Core 있으면 `completion-report` 호출, 없으면 동일 형식으로 인라인 생성.

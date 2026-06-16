@@ -1,7 +1,12 @@
 ---
 name: social-graphic
 description: >
-  SNS·마케팅 그래픽을 Gemini 이미지 생성으로 만든다 — 트리거 "카드뉴스", "인스타 이미지", "포스터 만들어", "SNS 그래픽", "스토리 이미지", 또는 /social-graphic. 인스타 1:1(1080x1080)·4:5(1080x1350)·스토리 9:16, 카드뉴스 시리즈, 포스터를 지원한다. 브랜드 토큰(색·폰트·로고)이 있으면 주입해 일관성을 유지하고, 없으면 /design-consultation 을 먼저 권유한다. AI-slop 방지(모노톤 3색 이내·Inter 금지·과잉장식 금지)를 프롬프트에 강제한다.
+  Use when the user wants social media or marketing graphics generated — SNS·마케팅 그래픽을
+  Gemini 이미지 생성으로 만든다 — 트리거 "카드뉴스", "인스타 이미지", "포스터 만들어", "SNS 그래픽",
+  "스토리 이미지", 또는 /social-graphic. Produces 인스타 1:1(1080x1080)·4:5(1080x1350)·스토리 9:16,
+  카드뉴스 시리즈, 포스터를 지원한다. 브랜드 토큰(색·폰트·로고)이 있으면 주입해 일관성을 유지하고, 없으면
+  /design-consultation 을 먼저 권유한다. AI-slop 방지(모노톤 3색 이내·Inter 금지·과잉장식 금지)를
+  프롬프트에 강제한다.
 version: 1.0.0
 author: simon-stack
 allowed-tools: Read, Write, Bash, AskUserQuestion
@@ -108,3 +113,10 @@ node "<skill_dir>/scripts/gen_graphic.mjs" \
 - 모델 ID 는 `scripts/gen_graphic.mjs` 상단 `MODEL` 상수에서 한 곳만 교체한다(주석으로 명시).
 - 실패 시: 어느 단계(키 누락 / SDK 미설치 / 응답에 이미지 없음)에서 막혔는지 명시하고 사용자 결정을 받는다.
 - 유료 API 호출이므로 변형 장수(`--n`)는 보수적으로. 확인 후 늘린다.
+
+## 완료 보고 (HTML) — 표준
+작업을 끝내면 **HTML 완료 보고서**를 생성한다 (SimonKCore `completion-report` 표준).
+- 첫 화면은 **심플 요약**(한눈 카드 한 줄) + 직관 그래픽/차트(인라인 SVG)·이미지.
+- 각 항목 옆 **[자세히] 버튼**(`<details>`)을 펼치면 상세 — 처음부터 쏟지 않는다(progressive disclosure).
+- 자체완결 1파일(인라인 CSS/SVG, 무JS) · 사용자 언어 · 현지시간 스탬프.
+- Core 있으면 `completion-report` 호출, 없으면 동일 형식으로 인라인 생성.

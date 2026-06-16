@@ -1,0 +1,44 @@
+{
+  "skill": "design-review",
+  "version": "2.0.0",
+  "cases": [
+    {
+      "id": "en-visual-qa-audit",
+      "prompt": "Audit the design of my live site and check if it looks good",
+      "assertions": [
+        {
+          "id": "finds-visual-issues",
+          "text": "Finds visual inconsistency, spacing issues, hierarchy problems, AI slop patterns, and slow interactions."
+        },
+        {
+          "id": "fixes-atomically-with-screenshots",
+          "text": "Iteratively fixes issues in source code, committing each fix atomically and re-verifying with before/after screenshots."
+        }
+      ]
+    },
+    {
+      "id": "ko-design-polish",
+      "prompt": "사이트 디자인 폴리시하고 시각적으로 다듬어줘",
+      "assertions": [
+        {
+          "id": "designers-eye-qa",
+          "text": "Performs a designer's-eye QA pass on the live site, identifying and fixing polish issues."
+        },
+        {
+          "id": "verifies-fixes",
+          "text": "Re-verifies each fix with screenshots rather than only listing problems."
+        }
+      ]
+    },
+    {
+      "id": "neg-vs-plan-review",
+      "prompt": "아직 구현 전 plan 단계인데 디자인 계획을 리뷰해줘",
+      "assertions": [
+        {
+          "id": "redirects-to-plan-design-review",
+          "text": "Recognizes pre-implementation plan-mode design review belongs to /plan-design-review, not this live-site visual audit."
+        }
+      ]
+    }
+  ]
+}

@@ -1,17 +1,44 @@
-[
-  {
-    "name": "trigger ko 1",
-    "user_input": "\uc6cc\ub4dc \ubb38\uc11c \ub9cc\ub4e4\uc5b4",
-    "expected_skill": "office-docs"
-  },
-  {
-    "name": "trigger slash",
-    "user_input": "/office-docs",
-    "expected_skill": "office-docs"
-  },
-  {
-    "name": "trigger en 1",
-    "user_input": "create docx",
-    "expected_skill": "office-docs"
-  }
-]
+{
+  "skill": "office-docs",
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "ko-create-docx",
+      "prompt": "워드 문서 만들어줘 — 회의록 양식으로",
+      "assertions": [
+        {
+          "id": "produces-docx",
+          "text": "Produces a native Word (Docx) document using python-docx."
+        },
+        {
+          "id": "selects-format",
+          "text": "Selects the appropriate Office format based on the request rather than defaulting to HTML."
+        }
+      ]
+    },
+    {
+      "id": "en-multi-sheet-excel-and-pptx",
+      "prompt": "Create an xlsx with multiple sheets and a pptx summary",
+      "assertions": [
+        {
+          "id": "xlsx-multisheet",
+          "text": "Generates a multi-sheet Xlsx via openpyxl."
+        },
+        {
+          "id": "pptx",
+          "text": "Generates a PowerPoint (Pptx) via python-pptx."
+        }
+      ]
+    },
+    {
+      "id": "neg-vs-design-html",
+      "prompt": "웹 HTML 페이지 디자인해줘",
+      "assertions": [
+        {
+          "id": "redirects-non-office",
+          "text": "Recognizes web HTML belongs to /design-html (and presentation HTML to /slides), not native Office formats."
+        }
+      ]
+    }
+  ]
+}
