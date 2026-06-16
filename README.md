@@ -1,5 +1,7 @@
 # SimonKDesign
 
+![version](https://img.shields.io/badge/version-0.2.0-5b8cff) ![license](https://img.shields.io/badge/license-MIT-green) [![validate](https://github.com/Simon-YHKim/SimonKDesign/actions/workflows/validate-plugin.yml/badge.svg)](https://github.com/Simon-YHKim/SimonKDesign/actions/workflows/validate-plugin.yml)
+
 > 예술·디자인 작업 오케스트레이션 플러그인
 
 오케스트레이션 진입점: `/skdesign`
