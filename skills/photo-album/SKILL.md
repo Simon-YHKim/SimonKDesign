@@ -146,3 +146,10 @@ office-docs 미설치면: "PDF 제본은 `/plugin install simonk-core@simonk-cor
 - HTML 은 사진을 상대경로로 참조한다. office-docs 핸드오프 시 사진 폴더와 HTML 의 상대 위치가 깨지지 않게 같은 트리에 둔다.
 - 실패 시: 어느 단계(사진 경로 없음 / 지원 안 하는 확장자 / out 경로 못 씀)에서 막혔는지 명시하고 사용자 결정을 받는다.
 - 시크릿 불필요 — API 키·env 를 요구하지 않는다. 요구하는 변형이 생기면 절대 하드코딩하지 말 것.
+
+## 완료 보고 (HTML) — 표준
+작업을 끝내면 **HTML 완료 보고서**를 생성한다 (SimonKCore `completion-report` 표준).
+- 첫 화면은 **심플 요약**(한눈 카드 한 줄) + 직관 그래픽/차트(인라인 SVG)·이미지.
+- 각 항목 옆 **[자세히] 버튼**(`<details>`)을 펼치면 상세 — 처음부터 쏟지 않는다(progressive disclosure).
+- 자체완결 1파일(인라인 CSS/SVG, 무JS) · 사용자 언어 · 현지시간 스탬프.
+- Core 있으면 `completion-report` 호출, 없으면 동일 형식으로 인라인 생성.
