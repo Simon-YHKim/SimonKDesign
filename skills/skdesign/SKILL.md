@@ -1,5 +1,6 @@
 ---
 name: skdesign
+version: 0.1.0
 description: >
   SimonKDesign 오케스트레이터 — 예술·디자인 작업의 단일 진입점. 트리거 "디자인 해줘", "UI 만들어줘",
   "로고/브랜드", "발표자료", "디자인 시스템", "skdesign", 또는 /skdesign. 사용자 의도를 러프하게 진단한 뒤

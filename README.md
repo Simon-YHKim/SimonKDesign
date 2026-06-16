@@ -18,4 +18,8 @@ SimonKCore 권장 동반 설치 (agent-delegate, model-router, instincts 등 공
 - `agents/` — 서브에이전트
 - `commands/` — 슬래시 커맨드
 
-_스킬 목록은 분류 매니페스트 확정 후 채워집니다._
+## 수록 스킬 (20개)
+
+진입점 `/skdesign` 가 의도를 진단해 아래 스킬로 라우팅합니다. 개별 직접 호출도 가능.
+
+`building-native-ui` · `coloring-art` · `consistency-guard` · `design-consultation` · `design-html` · `design-review` · `design-shotgun` · `design-system-keeper` · `design-system-page` · `logo-generator` · `office-docs` · `photo-album` · `plan-design-review` · `remotion-best-practices` · `scientific-paper` · `simon-design-first` · `skdesign` · `slides` · `social-graphic` · `stitch-design-flow`
