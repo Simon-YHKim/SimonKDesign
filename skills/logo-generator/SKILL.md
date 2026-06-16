@@ -1,7 +1,12 @@
 ---
 name: logo-generator
 description: >
-  로고·브랜드 아이덴티티를 Gemini 이미지 생성으로 만든다 — 트리거 "로고 만들어", "브랜드 마크", "워드마크", "심볼 디자인", "로고 디자인", 또는 /logo-generator. 브랜드 가치·성격을 먼저 진단한 뒤 마크/워드마크/심볼/모노그램 컨셉을 3~5개 변형으로 생성하고, 선택받아 정제한다. 벡터화(SVG)·배경 제거·export 경로를 안내한다. AI-slop 방지(모노톤 3색 이내·gradient/이모지/3D 금지·작은 크기 식별성)를 프롬프트 단계에서 강제한다. scripts/gen_logo.mjs 로 실제 PNG 를 생성한다(GEMINI_API_KEY 필요).
+  Use when the user wants a logo or brand identity mark generated — 로고·브랜드 아이덴티티를
+  Gemini 이미지 생성으로 만든다 — 트리거 "로고 만들어", "브랜드 마크", "워드마크", "심볼 디자인",
+  "로고 디자인", 또는 /logo-generator. Produces 마크/워드마크/심볼/모노그램 컨셉을 3~5개 변형으로
+  생성하고, 선택받아 정제한다. 브랜드 가치·성격을 먼저 진단한 뒤 벡터화(SVG)·배경 제거·export 경로를
+  안내한다. AI-slop 방지(모노톤 3색 이내·gradient/이모지/3D 금지·작은 크기 식별성)를 프롬프트 단계에서
+  강제한다. scripts/gen_logo.mjs 로 실제 PNG 를 생성한다(GEMINI_API_KEY 필요).
 version: 1.0.0
 author: simon-stack
 allowed-tools: Read, Write, Bash, AskUserQuestion

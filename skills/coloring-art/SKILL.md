@@ -1,8 +1,9 @@
 ---
 name: coloring-art
 description: >
-  유아·아동·교육용 색칠공부/라인아트 생성 스킬. 트리거 "색칠 그림", "공룡 색칠", "컬러링 페이지",
-  "라인아트", "색칠공부 만들어줘", coloring page, line art, 또는 /coloring-art. 굵은 검은 윤곽선·흰
+  Use when the user wants kids/educational coloring pages or line art — 유아·아동·교육용
+  색칠공부/라인아트 생성 스킬. 트리거 "색칠 그림", "공룡 색칠", "컬러링 페이지", "라인아트",
+  "색칠공부 만들어줘", coloring page, line art, 또는 /coloring-art. Produces 굵은 검은 윤곽선·흰
   배경·면이 단순화된 색칠 페이지나 단순 라인 일러스트를 Gemini 이미지 생성으로 만든다. 대상 연령·소재·난이도를
   먼저 확인하고(심플 모드: 보호자·아동 친화 질문), 안전·연령 적합 프롬프트로 생성한 뒤 인쇄용 PDF 묶기는
   office-docs(Core)로 핸드오프한다. skdesign 의 "그림·래스터·색칠" 경로 전용 생성 스킬.

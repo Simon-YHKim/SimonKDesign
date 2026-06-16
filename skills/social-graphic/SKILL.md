@@ -1,7 +1,12 @@
 ---
 name: social-graphic
 description: >
-  SNS·마케팅 그래픽을 Gemini 이미지 생성으로 만든다 — 트리거 "카드뉴스", "인스타 이미지", "포스터 만들어", "SNS 그래픽", "스토리 이미지", 또는 /social-graphic. 인스타 1:1(1080x1080)·4:5(1080x1350)·스토리 9:16, 카드뉴스 시리즈, 포스터를 지원한다. 브랜드 토큰(색·폰트·로고)이 있으면 주입해 일관성을 유지하고, 없으면 /design-consultation 을 먼저 권유한다. AI-slop 방지(모노톤 3색 이내·Inter 금지·과잉장식 금지)를 프롬프트에 강제한다.
+  Use when the user wants social media or marketing graphics generated — SNS·마케팅 그래픽을
+  Gemini 이미지 생성으로 만든다 — 트리거 "카드뉴스", "인스타 이미지", "포스터 만들어", "SNS 그래픽",
+  "스토리 이미지", 또는 /social-graphic. Produces 인스타 1:1(1080x1080)·4:5(1080x1350)·스토리 9:16,
+  카드뉴스 시리즈, 포스터를 지원한다. 브랜드 토큰(색·폰트·로고)이 있으면 주입해 일관성을 유지하고, 없으면
+  /design-consultation 을 먼저 권유한다. AI-slop 방지(모노톤 3색 이내·Inter 금지·과잉장식 금지)를
+  프롬프트에 강제한다.
 version: 1.0.0
 author: simon-stack
 allowed-tools: Read, Write, Bash, AskUserQuestion

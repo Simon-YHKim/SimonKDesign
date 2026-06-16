@@ -2,10 +2,12 @@
 name: skdesign
 version: 0.1.0
 description: >
-  SimonKDesign 오케스트레이터 — 예술·디자인 작업의 단일 진입점. 트리거 "디자인 해줘", "UI 만들어줘",
-  "로고/브랜드", "발표자료", "디자인 시스템", "skdesign", 또는 /skdesign. 사용자 의도를 러프하게 진단한 뒤
-  적절한 하위 디자인 스킬로 라우팅하고, 산출물마다 사용자와 상호작용하며 반복 디벨롭한다. 바로 코드/픽셀을
-  찍어내지 않고 진단 → 레퍼런스 → 방향 확정 → 산출 → 리뷰 순서를 지킨다.
+  Use when the user wants a single entry point for any art/design task and needs intent
+  diagnosis and routing — SimonKDesign 오케스트레이터, 예술·디자인 작업의 단일 진입점. 트리거
+  "디자인 해줘", "UI 만들어줘", "로고/브랜드", "발표자료", "디자인 시스템", "skdesign", 또는 /skdesign.
+  Produces a rough intent diagnosis, routes to the right sub-design skill, and iteratively
+  develops each output with the user — 바로 코드/픽셀을 찍어내지 않고 진단 → 레퍼런스 → 방향 확정
+  → 산출 → 리뷰 순서를 지킨다.
 allowed-tools:
   - Read
   - Write

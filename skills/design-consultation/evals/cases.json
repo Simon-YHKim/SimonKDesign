@@ -1,0 +1,48 @@
+{
+  "skill": "design-consultation",
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "en-create-design-md",
+      "prompt": "Create a DESIGN.md and a full design system for my new product",
+      "assertions": [
+        {
+          "id": "researches-and-proposes-system",
+          "text": "Understands the product, researches the landscape, and proposes a complete design system (aesthetic, typography, color, layout, spacing, motion)."
+        },
+        {
+          "id": "generates-previews",
+          "text": "Generates font and color preview pages for the user to choose from."
+        },
+        {
+          "id": "writes-design-md",
+          "text": "Creates DESIGN.md as the project's design source of truth."
+        }
+      ]
+    },
+    {
+      "id": "ko-brand-guidelines",
+      "prompt": "브랜드 가이드라인이랑 디자인 시스템 처음부터 잡아줘",
+      "assertions": [
+        {
+          "id": "complete-system",
+          "text": "Proposes a complete design system covering aesthetic, typography, color, layout, spacing, and motion."
+        },
+        {
+          "id": "design-md-output",
+          "text": "Produces a DESIGN.md as the persistent source of truth."
+        }
+      ]
+    },
+    {
+      "id": "neg-existing-site",
+      "prompt": "이미 운영 중인 사이트에서 디자인 시스템을 추론해줘",
+      "assertions": [
+        {
+          "id": "redirects-to-plan-design-review",
+          "text": "For existing sites, redirects to /plan-design-review to infer the system instead of creating from scratch."
+        }
+      ]
+    }
+  ]
+}

@@ -1,17 +1,48 @@
-[
-  {
-    "name": "trigger ko 1",
-    "user_input": "\ub514\uc790\uc778 \uc2dc\uc2a4\ud15c \ub9cc\ub4e4\uc5b4",
-    "expected_skill": "design-system-page"
-  },
-  {
-    "name": "trigger slash",
-    "user_input": "/design-system-page",
-    "expected_skill": "design-system-page"
-  },
-  {
-    "name": "trigger en 1",
-    "user_input": "design system page",
-    "expected_skill": "design-system-page"
-  }
-]
+{
+  "skill": "design-system-page",
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "ko-brand-book",
+      "prompt": "브랜드 북 만들어 — design system 페이지랑 PDF로",
+      "assertions": [
+        {
+          "id": "design-system-html",
+          "text": "Produces design-system.html covering color, typography, components, icons, and logo."
+        },
+        {
+          "id": "a4-brand-book-pdf",
+          "text": "Generates an A4 brand-book PDF, rendering via a headless browser (chromium/edge)."
+        },
+        {
+          "id": "zero-build",
+          "text": "Uses Google Fonts CDN + inline CSS/SVG with zero build step."
+        }
+      ]
+    },
+    {
+      "id": "en-style-guide",
+      "prompt": "Generate a style guide html and brand book pdf from our design.md",
+      "assertions": [
+        {
+          "id": "consumes-design-md",
+          "text": "Builds the catalog from design.md (founder-context output) or a provided brand reference."
+        },
+        {
+          "id": "full-catalog",
+          "text": "Produces a full design-system catalog page plus a printable brand book."
+        }
+      ]
+    },
+    {
+      "id": "neg-vs-one-off-page",
+      "prompt": "일회성 랜딩 페이지 하나만 HTML로 만들어줘",
+      "assertions": [
+        {
+          "id": "redirects-design-html",
+          "text": "Recognizes a one-off page belongs to /design-html, not a full design-system catalog."
+        }
+      ]
+    }
+  ]
+}

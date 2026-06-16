@@ -1,17 +1,44 @@
-[
-  {
-    "name": "trigger ko 1",
-    "user_input": "\uc2ac\ub77c\uc774\ub4dc \ub9cc\ub4e4\uc5b4",
-    "expected_skill": "slides"
-  },
-  {
-    "name": "trigger slash",
-    "user_input": "/slides",
-    "expected_skill": "slides"
-  },
-  {
-    "name": "trigger en 1",
-    "user_input": "pitch deck",
-    "expected_skill": "slides"
-  }
-]
+{
+  "skill": "slides",
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "ko-pitch-deck",
+      "prompt": "피치덱 만들어줘 — 우리 스타트업 발표자료",
+      "assertions": [
+        {
+          "id": "zero-dep-html-slides",
+          "text": "Produces zero-dependency HTML slides (fixed 16:9, embedded CSS/JS)."
+        },
+        {
+          "id": "three-style-preview",
+          "text": "Generates 3 visual style previews, then builds the full deck in the chosen tone."
+        }
+      ]
+    },
+    {
+      "id": "en-presentation-slides",
+      "prompt": "Make a slide deck presentation from this content",
+      "assertions": [
+        {
+          "id": "show-dont-tell",
+          "text": "Applies the simon-design-first show-don't-tell 3-preview selection pattern before generating."
+        },
+        {
+          "id": "html-deck-output",
+          "text": "Produces an HTML presentation deck (and can convert PPT files to web)."
+        }
+      ]
+    },
+    {
+      "id": "neg-vs-general-html",
+      "prompt": "발표용 아니고 그냥 일반 웹 페이지 HTML 만들어줘",
+      "assertions": [
+        {
+          "id": "redirects-design-html",
+          "text": "Recognizes general HTML belongs to /design-html, not presentation decks."
+        }
+      ]
+    }
+  ]
+}

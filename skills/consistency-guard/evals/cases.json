@@ -1,0 +1,44 @@
+{
+  "skill": "consistency-guard",
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "ko-schema-validation",
+      "prompt": "우리 서비스 config랑 design token JSON 일관성 검증해줘",
+      "assertions": [
+        {
+          "id": "json-schema-framework",
+          "text": "Produces a JSON-schema-based consistency framework with automated validation rules."
+        },
+        {
+          "id": "classifies-strict-vs-flexible",
+          "text": "Determines which parts need strict consistency (API contracts, design tokens, config) vs flexible parts."
+        }
+      ]
+    },
+    {
+      "id": "en-api-contract-uniformity",
+      "prompt": "Help me maintain uniformity of API contracts across services",
+      "assertions": [
+        {
+          "id": "identifies-strict-zones",
+          "text": "Identifies API contracts as a strict-consistency zone requiring schema validation."
+        },
+        {
+          "id": "automated-validation",
+          "text": "Defines automated validation rules to enforce consistency rather than manual checks."
+        }
+      ]
+    },
+    {
+      "id": "neg-vs-design-system",
+      "prompt": "디자인 시스템 토큰을 세션 간에 유지하고 design drift를 막아줘",
+      "assertions": [
+        {
+          "id": "redirects-to-keeper",
+          "text": "Recognizes persistent cross-session design-system token storage and drift auditing belongs to design-system-keeper, not data/config schema guarding."
+        }
+      ]
+    }
+  ]
+}

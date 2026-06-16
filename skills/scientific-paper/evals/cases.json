@@ -1,17 +1,48 @@
-[
-  {
-    "name": "trigger ko 1",
-    "user_input": "\ub17c\ubb38 \uc791\uc131",
-    "expected_skill": "scientific-paper"
-  },
-  {
-    "name": "trigger slash",
-    "user_input": "/scientific-paper",
-    "expected_skill": "scientific-paper"
-  },
-  {
-    "name": "trigger en 1",
-    "user_input": "scientific paper",
-    "expected_skill": "scientific-paper"
-  }
-]
+{
+  "skill": "scientific-paper",
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "ko-latex-paper",
+      "prompt": "논문 작성 도와줘 — LaTeX 수식이랑 학술 시각화 포함해서",
+      "assertions": [
+        {
+          "id": "latex-and-bibtex",
+          "text": "Produces academic-paper output with LaTeX equations and BibTeX citations."
+        },
+        {
+          "id": "academic-figures",
+          "text": "Generates academic figures via matplotlib/plotly."
+        },
+        {
+          "id": "journal-format",
+          "text": "Uses a peer-review format (IEEE/ACM/Nature) and prepares for arxiv submission."
+        }
+      ]
+    },
+    {
+      "id": "en-peer-review-format",
+      "prompt": "Write a scientific paper with latex equations in IEEE format",
+      "assertions": [
+        {
+          "id": "ieee-format",
+          "text": "Applies the requested IEEE peer-review format with LaTeX/BibTeX pipelines."
+        },
+        {
+          "id": "figure-pipeline",
+          "text": "Sets up the academic figure pipeline for the paper."
+        }
+      ]
+    },
+    {
+      "id": "neg-vs-office-docs",
+      "prompt": "그냥 워드 문서로 일반 보고서 만들어줘",
+      "assertions": [
+        {
+          "id": "redirects-general-docs",
+          "text": "Recognizes a general Word document belongs to /office-docs, not academic LaTeX/BibTeX formatting."
+        }
+      ]
+    }
+  ]
+}

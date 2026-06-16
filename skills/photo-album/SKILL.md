@@ -1,11 +1,13 @@
 ---
 name: photo-album
 description: >
-  사용자의 실사 사진을 앨범·포토북 레이아웃으로 배치한다. 트리거 "사진첩", "포토북", "사진 모음", "앨범 만들어줘",
-  "사진 정리해서 책으로", photo album, photo book, 또는 /photo-album. 사진을 새로 생성하지 않는다 — 사용자가
-  올리거나 고른 실제 사진을 그리드·콜라주·페이지 레이아웃으로 배치하고 캡션을 달아 인쇄용 HTML 로 만든다.
-  사진 인테이크(업로드·선택, 고령 사용자는 보호자 보조) → 레이아웃 → 캡션 순서를 지키며, 큰글씨·심플 모드를
-  기본으로 둔다. 인쇄/PDF 제본은 office-docs(Core)로 핸드오프한다. skdesign 의 "사진 배치" 경로 전용 스킬.
+  Use when the user wants their real photos arranged into an album or photo book layout —
+  사용자의 실사 사진을 앨범·포토북 레이아웃으로 배치한다. 트리거 "사진첩", "포토북", "사진 모음",
+  "앨범 만들어줘", "사진 정리해서 책으로", photo album, photo book, 또는 /photo-album. Produces 사용자가
+  올리거나 고른 실제 사진을 그리드·콜라주·페이지 레이아웃으로 배치하고 캡션을 달아 인쇄용 HTML 로 만든다 —
+  사진을 새로 생성하지 않는다. 사진 인테이크(업로드·선택, 고령 사용자는 보호자 보조) → 레이아웃 → 캡션
+  순서를 지키며, 큰글씨·심플 모드를 기본으로 둔다. 인쇄/PDF 제본은 office-docs(Core)로 핸드오프한다.
+  skdesign 의 "사진 배치" 경로 전용 스킬.
 allowed-tools:
   - Read
   - Write

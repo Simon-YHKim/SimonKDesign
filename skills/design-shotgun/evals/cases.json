@@ -1,0 +1,44 @@
+{
+  "skill": "design-shotgun",
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "en-explore-design-options",
+      "prompt": "Explore designs and show me some options for this screen",
+      "assertions": [
+        {
+          "id": "generates-multiple-variants",
+          "text": "Generates multiple AI design variants for the screen."
+        },
+        {
+          "id": "comparison-board-feedback",
+          "text": "Opens a comparison board, collects structured feedback, and iterates."
+        }
+      ]
+    },
+    {
+      "id": "ko-dont-like-look",
+      "prompt": "이거 지금 모양이 마음에 안 들어 — 디자인 변형들 보여줘",
+      "assertions": [
+        {
+          "id": "design-variants",
+          "text": "Produces several distinct design variants to compare rather than a single design."
+        },
+        {
+          "id": "structured-iteration",
+          "text": "Collects structured feedback to drive the next iteration."
+        }
+      ]
+    },
+    {
+      "id": "neg-vs-finalize-html",
+      "prompt": "이미 고른 시안을 production HTML로 마무리해줘",
+      "assertions": [
+        {
+          "id": "redirects-to-design-html",
+          "text": "Recognizes finalizing a chosen design into production HTML belongs to /design-html, not variant exploration."
+        }
+      ]
+    }
+  ]
+}

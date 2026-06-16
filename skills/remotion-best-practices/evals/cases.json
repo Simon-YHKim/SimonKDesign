@@ -1,17 +1,44 @@
-[
-  {
-    "name": "trigger ko 1",
-    "user_input": "Remotion \ube44\ub514\uc624",
-    "expected_skill": "remotion-best-practices"
-  },
-  {
-    "name": "trigger slash",
-    "user_input": "/remotion-best-practices",
-    "expected_skill": "remotion-best-practices"
-  },
-  {
-    "name": "trigger en 1",
-    "user_input": "remotion video",
-    "expected_skill": "remotion-best-practices"
-  }
-]
+{
+  "skill": "remotion-best-practices",
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "ko-remotion-video",
+      "prompt": "Remotion 비디오로 데이터 기반 영상 만들어줘",
+      "assertions": [
+        {
+          "id": "programmatic-ts-react",
+          "text": "Produces a programmatic video in Remotion using TypeScript + React (compositions, sequences)."
+        },
+        {
+          "id": "audio-and-render",
+          "text": "Covers audio sync and lambda render for data-driven video generation."
+        }
+      ]
+    },
+    {
+      "id": "en-code-driven-video",
+      "prompt": "Build a code-driven programmatic video from this dataset",
+      "assertions": [
+        {
+          "id": "renders-mp4",
+          "text": "Produces an actual rendered MP4/WebM video, not a static design."
+        },
+        {
+          "id": "composition-structure",
+          "text": "Structures the video with Remotion compositions and sequences."
+        }
+      ]
+    },
+    {
+      "id": "neg-vs-design-exploration",
+      "prompt": "비디오 말고 그냥 시각 디자인 시안들 보여줘",
+      "assertions": [
+        {
+          "id": "redirects-non-video",
+          "text": "Recognizes static visual design exploration belongs to /design-shotgun, not video generation."
+        }
+      ]
+    }
+  ]
+}
