@@ -7,7 +7,6 @@
   "license": "MIT",
   "keywords": ["claude-code", "plugin", "orchestration", "simonk", "design"],
   "skills": [
-    "./skills/building-native-ui/",
     "./skills/coloring-art/",
     "./skills/consistency-guard/",
     "./skills/dashboard-review/",
@@ -18,7 +17,6 @@
     "./skills/design-system-keeper/",
     "./skills/design-system-page/",
     "./skills/logo-generator/",
-    "./skills/office-docs/",
     "./skills/photo-album/",
     "./skills/plan-design-review/",
     "./skills/remotion-best-practices/",
